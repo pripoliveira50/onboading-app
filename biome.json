@@ -1,0 +1,62 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.7.3/schema.json",
+  "formatter": {
+    "indentStyle": "space",
+    "lineWidth": 80
+  },
+  "vcs": {
+    "clientKind": "git",
+    "useIgnoreFile": true,
+    "enabled": true,
+    "defaultBranch": "main"
+  },
+  "files": {
+    "ignoreUnknown": true,
+    "ignore": [
+      "**/cosmos-export/*",
+      "**/@types/*",
+      "**/build/*",
+      "**/.github/*",
+      "**/.husky/*",
+      "**/assets/*"
+    ]
+  },
+  "organizeImports": {
+    "enabled": true
+  },
+  "linter": {
+    "ignore": ["*/package.json"],
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "style": {
+        "noParameterAssign": "warn"
+      },
+      "correctness": {
+        "noGlobalObjectCalls": "error",
+        "noUndeclaredVariables": "error",
+        "noInvalidUseBeforeDeclaration": "error",
+        "useExhaustiveDependencies": "warn",
+        "noUnsafeOptionalChaining": "warn",
+        "noChildrenProp": "warn"
+      },
+      "complexity": {
+        "noBannedTypes": "warn",
+        "noForEach": "warn"
+      },
+      "suspicious": {
+        "noConfusingVoidType": "warn",
+        "noExplicitAny": "warn",
+        "noShadowRestrictedNames": "warn",
+        "noAssignInExpressions": "warn",
+        "noArrayIndexKey": "warn",
+        "noRedeclare": "warn",
+        "noImplicitAnyLet": "warn",
+        "noAsyncPromiseExecutor": "warn"
+      },
+      "performance": {
+        "noAccumulatingSpread": "warn"
+      }
+    }
+  }
+}
